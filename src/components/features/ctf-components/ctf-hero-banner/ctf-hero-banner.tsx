@@ -32,12 +32,13 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 
   innerContainer: {
-    marginLeft: 'auto',
+    marginLeft: '0',
     marginRight: 'auto',
     maxWidth: '125.8rem',
-    padding: theme.spacing(33, 0, 33),
+    background: `rgba(255, 255, 255, 0.7)`,
+    padding: theme.spacing(10),
     position: 'relative',
-    width: '100%',
+    width: '40%',
     '@media (min-height: 91.2em)': {
       padding: theme.spacing(39, 0, 39),
     },

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104.1 37.43" class="jss9">
+<defs>
+        <linearGradient id="a" x1="7821.9" y1="3248.46" x2="7831.82" y2="3248.46" gradientTransform="translate(-7815.17 -3242.09)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fc7575"/>
+            <stop offset="1" stop-color="#f88"/>
+        </linearGradient>
+        <linearGradient id="b" x1="11405.18" y1="-2092.21" x2="11395.48" y2="-2092.21" gradientTransform="translate(-11384.08 2101.04)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#ffb78f"/>
+            <stop offset="1" stop-color="#fca87e"/>
+        </linearGradient>
+        <linearGradient id="c" x1="8712.74" y1="-6859.69" x2="8722.51" y2="-6859.69" gradientTransform="translate(-8701.54 6873.49)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#ffc969"/>
+            <stop offset="1" stop-color="#ffd47d"/>
+        </linearGradient>
+        <linearGradient id="d" x1="3144.82" y1="-7803.67" x2="3154.82" y2="-7803.67" gradientTransform="translate(-3138.13 7820.04)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#58c484"/>
+            <stop offset="1" stop-color="#68da9a"/>
+        </linearGradient>
+        <linearGradient id="e" x1="-581.16" y1="-2299.11" x2="-571.36" y2="-2299.11" gradientTransform="translate(583.59 2313)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#73a8c6"/>
+            <stop offset="1" stop-color="#8dbad8"/>
+        </linearGradient>
+        <linearGradient id="f" x1="8304.78" y1="-6901.53" x2="8314.61" y2="-6901.53" gradientTransform="translate(-8302.24 6910.26)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#ab8ace"/>
+            <stop offset="1" stop-color="#bf9edb"/>
+        </linearGradient>
+    </defs>
+    
+    <!-- House Logo -->
+    <path d="M8.4 19.8L2.4 25.8V10.2L8.4 4.2L14.4 10.2V25.8L8.4 19.8Z" fill="url(#a)"/>
+    <path d="M8.4 4.2L14.4 10.2L20.4 4.2L14.4 1.8L8.4 4.2Z" fill="url(#b)"/>
+    <path d="M14.4 10.2V25.8L20.4 19.8V4.2L14.4 10.2Z" fill="url(#c)"/>
+    <path d="M8.4 19.8V25.8H20.4V19.8H8.4Z" fill="url(#d)"/>
+ <!-- "Forms" Text -->
+  <text x="42" y="18" font-family="Arial, sans-serif" font-size="14.4" fill="#000">Forms</text>
+  <!-- "CONSTRUCTION" Text -->
+  <text x="42" y="32.4" font-family="Arial, sans-serif" font-size="7.2" fill="#000">CONSTRUCTION</text>
+</svg>
