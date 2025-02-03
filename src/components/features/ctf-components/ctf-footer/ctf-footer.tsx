@@ -3,7 +3,7 @@ import Facebook from '@mui/icons-material/Facebook';
 import Instagram from '@mui/icons-material/Instagram';
 import LinkedIn from '@mui/icons-material/LinkedIn';
 import Twitter from '@mui/icons-material/Twitter';
-import { Theme, Container, Typography } from '@mui/material';
+import { Theme, Container, Typography, Grid } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { useTranslation } from 'next-i18next';
 
@@ -15,6 +15,7 @@ import {
 } from '@src/components/features/ctf-components/ctf-navigation/utils';
 import { LanguageSelector } from '@src/components/features/language-selector';
 import { Link } from '@src/components/shared/link';
+import { LandingPageEmailForm } from '@src/components/features/LandingPageEmailForm';
 import { useContentfulContext } from '@src/contentful-context';
 import { CONTAINER_WIDTH } from '@src/theme';
 
@@ -280,23 +281,30 @@ export const CtfFooter = (props: FooterFieldsFragment) => {
             </section>
           </div>
 
-          <div className={classes.socialDisclaimer}>
-            <div className={classes.socialWrapper}>
-              <Typography className={classes.socialTitle}>{t('socials.findUsOn')}</Typography>
-              <div className={classes.social}>
-                {footerContent?.linkedinLink && (
-                  <a
-                    href={footerContent.linkedinLink}
-                    title={t('socials.linkedin')}
-                    target="_blank"
-                    rel="nofollow noreferrer"
-                  >
-                    <LinkedIn />
-                  </a>
-                )}
+          <Grid container spacing={4}>
+            <Grid item xs={12} md={6}>
+              <div className={classes.socialDisclaimer}>
+                <div className={classes.socialWrapper}>
+                  <Typography className={classes.socialTitle}>{t('socials.findUsOn')}</Typography>
+                  <div className={classes.social}>
+                    {footerContent?.linkedinLink && (
+                      <a
+                        href={footerContent.linkedinLink}
+                        title={t('socials.linkedin')}
+                        target="_blank"
+                        rel="nofollow noreferrer"
+                      >
+                        <LinkedIn />
+                      </a>
+                    )}
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <LandingPageEmailForm />
+            </Grid>
+          </Grid>
         </section>
       </Container>
     </>
