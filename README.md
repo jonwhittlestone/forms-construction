@@ -15,7 +15,20 @@ components, and data management.
 
 ![The homepage of the Marketing Starter Template](marketing-starter-template.jpg 'The homepage of the Marketing Starter Template')
 
-$~$
+## Email Form Setup
+
+To enable the contact form email functionality:
+
+1. Create a `.env.local` file in the root directory
+2. Add the following environment variables:
+   ```
+   NETLIFY_ACCESS_TOKEN=your_netlify_access_token
+   SITE_ID=your_netlify_site_id
+   ```
+3. Get your Netlify access token from https://app.netlify.com/user/applications#personal-access-tokens
+4. Get your site ID from your Netlify site settings
+
+The contact form in the footer will send emails to jon@howapped.com using Netlify's email integration.
 
 ## What is Contentful?
 

@@ -1,2 +1,4 @@
 [build]
   command = "NEXT_PUBLIC_BASE_URL=\"${NEXT_PUBLIC_BASE_URL:-$URL}\" yarn build"
+[[plugins]]
+  package = "@netlify/plugin-emails"
