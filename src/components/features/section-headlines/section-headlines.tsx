@@ -57,12 +57,12 @@ export const SectionHeadlines = (props: SectionHeadlinesPropsInterface) => {
   } = props;
 
   const classes = useStyles();
-  const computedHeadlineProps: TypographyProps & { component?: string } = {
+  const computedHeadlineProps: TypographyProps = {
     variant: 'h1',
-    component: 'h2',
+    component: 'h2' as React.ElementType,
     ...headlineProps,
-    ...headlineLivePreviewProps,
     className: clsx(headlineProps.className, classes.headline),
+    ...(headlineLivePreviewProps as Record<string, unknown>),
   };
   const computedSublineProps: TypographyProps = {
     variant: 'h3',
