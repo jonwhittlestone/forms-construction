@@ -83,7 +83,7 @@ export const LandingPageEmailForm = () => {
           email: formData.email,
           phone: formData.phone,
           message: formData.message,
-          to: 'jon@howapped.com',
+          to: 'dev+mailgun@howapped.com',
         }),
       });
 
