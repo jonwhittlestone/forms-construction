@@ -37,7 +37,7 @@ export const handler: Handler = async (event) => {
     const emailContent = `
       New message from contact form:
       
-      From: ${email}
+      From: Postmaster <dev@howapped.com>
       Phone: ${phone || 'Not provided'}
       Message: ${message}
     `;
