@@ -5,7 +5,7 @@ import { useTranslation } from 'next-i18next';
 
 import { CtfNavigationGql } from '@src/components/features/ctf-components/ctf-navigation/ctf-navigation-gql';
 import { Link } from '@src/components/shared/link';
-import Logo from '@src/icons/colorful-forms-logo.svg';
+import Image from 'next/image';
 import { HEADER_HEIGHT, HEADER_HEIGHT_MD, CONTAINER_WIDTH } from '@src/theme';
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -62,6 +62,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     height: 'auto',
     width: '113px',
   },
+  logoLink: {
+    display: 'block',
+  },
 }));
 
 interface HeaderPropsInterface {
@@ -86,8 +89,21 @@ export const Header = (props: HeaderPropsInterface) => {
             maxWidth: `${CONTAINER_WIDTH / 10}rem`,
           }}
         >
-          <Link href="/" withoutMaterial title={t('common.homepage')}>
-            <Logo className={classes.corporateLogo} />
+          <Link href="/" withoutMaterial title={t('common.homepage')} className={classes.logoLink}>
+            <Image
+              src="/icons/FORMS_Logo_TRANSPARANT_SCREEN_FINAL.png"
+              alt="FORMS Construction"
+              width={113}
+              height={40}
+              quality={95}
+              sizes="113px"
+              style={{
+                width: '113px',
+                height: 'auto',
+                display: 'block',
+              }}
+              priority
+            />
           </Link>
           <Box display={{ xs: 'none', md: 'block' }}>
             <div className={classes.menuWrapper}>
