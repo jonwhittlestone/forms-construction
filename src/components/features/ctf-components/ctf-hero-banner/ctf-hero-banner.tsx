@@ -38,7 +38,10 @@ const useStyles = makeStyles((theme: Theme) => ({
     background: `rgba(255, 255, 255, 0.7)`,
     padding: theme.spacing(10),
     position: 'relative',
-    width: '40%',
+    width: '90%',
+    [theme.breakpoints.up('md')]: {
+      width: '40%',
+    },
     '@media (min-height: 91.2em)': {
       padding: theme.spacing(39, 0, 39),
     },

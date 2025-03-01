@@ -90,20 +90,17 @@ export const Header = (props: HeaderPropsInterface) => {
           }}
         >
           <Link href="/" withoutMaterial title={t('common.homepage')} className={classes.logoLink}>
-            <Image
-              src="/icons/FORMS_Logo_TRANSPARANT_SCREEN_FINAL.png"
-              alt="FORMS Construction"
-              width={113}
-              height={40}
-              quality={95}
-              sizes="113px"
-              style={{
-                width: '113px',
-                height: 'auto',
-                display: 'block',
-              }}
-              priority
-            />
+            <Box component="div" className={classes.corporateLogo}>
+              <Image
+                src="/icons/FORMS_Logo_TRANSPARANT_SCREEN_FINAL.png"
+                alt="FORMS Construction"
+                width={113}
+                height={40}
+                quality={95}
+                sizes="113px"
+                priority
+              />
+            </Box>
           </Link>
           <Box display={{ xs: 'none', md: 'block' }}>
             <div className={classes.menuWrapper}>
