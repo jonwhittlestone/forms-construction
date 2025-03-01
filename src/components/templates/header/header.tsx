@@ -60,8 +60,10 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   corporateLogo: {
     display: 'block',
-    height: 'auto',
     width: '113px',
+    height: '40px',
+    position: 'relative',
+    overflow: 'hidden',
   },
   logoLink: {
     display: 'block',
@@ -97,8 +99,9 @@ export const Header = (props: HeaderPropsInterface) => {
                 alt="FORMS Construction"
                 width={113}
                 height={40}
+                layout="responsive"
+                objectFit="contain"
                 quality={95}
-                sizes="113px"
                 priority
               />
             </Box>
