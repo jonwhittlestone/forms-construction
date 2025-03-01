@@ -57,9 +57,9 @@ export const handler: Handler = async (event) => {
 
     // Prepare form data for Mailgun API
     const formData = new URLSearchParams();
-    formData.append('from', 'Postmaster <dev@howapped.com>');
+    formData.append('from', 'Forms Construction Emailer <dev@howapped.com>');
     formData.append('to', to);
-    formData.append('subject', 'New Contact Form Submission');
+    formData.append('subject', 'A new email from the website..');
     formData.append('text', emailContent);
 
     // Send email using Mailgun API

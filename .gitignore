@@ -192,3 +192,4 @@ bower_components
 
 ### Install artifacts ###
 package-lock.json
+.env.local

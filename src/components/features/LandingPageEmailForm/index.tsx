@@ -47,6 +47,8 @@ export const LandingPageEmailForm = () => {
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const validateEmail = (email: string) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -98,10 +100,14 @@ export const LandingPageEmailForm = () => {
         message: '',
       });
 
-      alert('Message sent successfully!');
+      setShowSuccess(true);
+      // Hide success message after 5 seconds
+      setTimeout(() => setShowSuccess(false), 5000);
     } catch (error) {
       console.error('Error sending email:', error);
-      alert('Failed to send message. Please try again later.');
+      setSubmitError('Failed to send message. Please try again later.');
+      // Hide error message after 5 seconds
+      setTimeout(() => setSubmitError(''), 5000);
     } finally {
       setIsSubmitting(false);
     }
@@ -169,6 +175,38 @@ export const LandingPageEmailForm = () => {
       >
         {isSubmitting ? 'Sending...' : 'Send Message'}
       </Button>
+
+      {showSuccess && (
+        <Box
+          sx={{
+            backgroundColor: 'rgba(76, 175, 80, 0.1)',
+            color: '#4caf50',
+            padding: 2,
+            borderRadius: 1,
+            marginTop: 2,
+            textAlign: 'center',
+            border: '1px solid #4caf50',
+          }}
+        >
+          <Typography>Message sent successfully!</Typography>
+        </Box>
+      )}
+
+      {submitError && (
+        <Box
+          sx={{
+            backgroundColor: 'rgba(244, 67, 54, 0.1)',
+            color: '#f44336',
+            padding: 2,
+            borderRadius: 1,
+            marginTop: 2,
+            textAlign: 'center',
+            border: '1px solid #f44336',
+          }}
+        >
+          <Typography>{submitError}</Typography>
+        </Box>
+      )}
     </Box>
   );
 };
