@@ -7,7 +7,6 @@ import { CtfNavigationGql } from '@src/components/features/ctf-components/ctf-na
 import { Link } from '@src/components/shared/link';
 import Image from 'next/image';
 import { HEADER_HEIGHT, HEADER_HEIGHT_MD, CONTAINER_WIDTH } from '@src/theme';
-import LogoImage from '@public/icons/FORMS_Logo_TRANSPARANT_SCREEN_FINAL.png';
 
 const useStyles = makeStyles((theme: Theme) => ({
   appbar: {
@@ -95,7 +94,7 @@ export const Header = (props: HeaderPropsInterface) => {
           <Link href="/" withoutMaterial title={t('common.homepage')} className={classes.logoLink}>
             <Box component="div" className={classes.corporateLogo}>
               <Image
-                src={LogoImage}
+                src="/icons/FORMS_Logo_TRANSPARANT_SCREEN_FINAL.png"
                 alt="FORMS Construction"
                 width={113}
                 height={40}
@@ -103,6 +102,7 @@ export const Header = (props: HeaderPropsInterface) => {
                 objectFit="contain"
                 quality={95}
                 priority
+                unoptimized
               />
             </Box>
           </Link>
